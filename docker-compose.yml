@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  vscode:
+    image: linuxserver/code-server:4.4.0
+    ports:
+      - "8443:8443"
+    environment:
+      - PASSWORD=alohamora
+      - USE_HTTPS=false
+      - SUDO_PASSWORD=alohamora
