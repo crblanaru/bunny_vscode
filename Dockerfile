@@ -24,8 +24,4 @@ COPY ./Cargo.toml ./Cargo.toml
 # # # 4. Now that the dependency is built, copy your source code
 COPY ./src ./src
 
-
-USER 911
-ENV USER=abc
-WORKDIR /home/coder
 ENTRYPOINT ["/init"]
