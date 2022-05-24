@@ -2,7 +2,7 @@ version: "3"
 
 services:
   vscode:
-    image: linuxserver/code-server:4.4.0
+    build: .
     ports:
       - "8443:8443"
     environment:
