@@ -14,14 +14,3 @@ RUN cargo --version
 RUN rustc --version
 RUN apt-get remove -y --auto-remove wget
 RUN rm -rf /var/lib/apt/lists/*
-
-RUN USER=root cargo new --bin config/workspace/holodeck
-WORKDIR /config/workspace/holodeck
-
-# # 2. Copy our manifests
-COPY ./Cargo.toml ./Cargo.toml
-
-# # # 4. Now that the dependency is built, copy your source code
-COPY ./src ./src
-
-ENTRYPOINT ["/init"]
