@@ -5,7 +5,8 @@ services:
     build: .
     ports:
       - "8443:8443"
-    environment:
-      - PASSWORD=alohamora
-      - USE_HTTPS=false
-      - SUDO_PASSWORD=alohamora
+    volumes:
+      - persist:/persistance
+
+volumes:
+  persist:
