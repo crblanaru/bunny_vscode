@@ -8,6 +8,7 @@ services:
       - HASHED_PASSWORD=$$argon2i$$v=19$$m=4096,t=3,p=1$$x5PHRmEiaCqN4i+t+1L9Jw$$jn1Dh9HD0T/UYu7DonQu35CtHMAS3bo+Llw6/N7Qy4k
     ports:
       - "8443:8443"
+      - "3030:3030"
     volumes:
       - persist:/persistance
 
